@@ -1,0 +1,60 @@
+{
+    "name": "xypp/flarum-qqwx-redirect-page",
+    "description": "Adding a page when user open the website in qq/wechat.",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.2.0"
+    },
+    "authors": [
+        {
+            "name": "小鱼飘飘",
+            "email": "z@xypp.cc",
+            "role": "Developer"
+        },
+        {
+            "name": "Kate",
+            "email": "kate522@88.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Xypp\\QQWxRedirect\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "QQ/Wechat Redirect",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-directions",
+                "color": "#fff",
+                "backgroundColor": "#4caf50"
+            }
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": true,
+                "forum": true,
+                "js": true,
+                "jsCommon": true,
+                "css": true,
+                "locale": true,
+                "gitConf": true,
+                "githubActions": true,
+                "prettier": true,
+                "typescript": true,
+                "bundlewatch": false,
+                "backendTesting": true,
+                "editorConfig": true,
+                "styleci": true
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

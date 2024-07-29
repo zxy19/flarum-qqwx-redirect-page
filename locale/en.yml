@@ -1,0 +1,22 @@
+xypp-qqwx-redirect-page:
+  view:
+    title: Open with Browser
+    tip:
+      line1_before_icon: "Click the button"
+      line1_after_icon: "and open in browser"
+      line2_before_android: "For Android"
+      line2_before_ios: "For IOS"
+      line2_after: "↗↗↗"
+    content: "\n\n1.This site is not available in this app.\n\n2.Please click 'Open in Browser'"
+    click_tip:
+      before_icon: "Click the button"
+      after_icon: " or Copy the url and open it in browser"
+    copy:
+      tip: "Click to copy the url"
+      success: "Copy Success"
+  admin:
+    blockUa: "The user agent to block"
+    urlPardon: "The url to pardon"
+    enableRegex: "Enable regex for block user agent"
+    enableRegexPardon: "Enable regex for pardon url"
+    enable: "Enable"

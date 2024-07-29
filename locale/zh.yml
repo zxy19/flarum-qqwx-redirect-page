@@ -1,0 +1,22 @@
+xypp-qqwx-redirect-page:
+  view:
+    title: 使用浏览器打开
+    tip:
+      line1_before_icon: "点击右上角"
+      line1_after_icon: "在 浏览器 打开"
+      line2_before_android: "安卓设备"
+      line2_before_ios: "苹果设备"
+      line2_after: "↗↗↗"
+    content: "\n\n1.本站不支持 微信或QQ 内访问\n\n2.请按提示在手机 浏览器 打开"
+    click_tip:
+      before_icon: "点击右上角"
+      after_icon: " or 复制网址自行打开"
+    copy:
+      tip: "点此复制本站网址"
+      success: "复制成功，么么哒"
+  admin:
+    blockUa: "要屏蔽的UA"
+    urlPardon: "白名单URL"
+    enableRegex: "对于UA使用正则"
+    enableRegexPardon: "对于白名单URL使用正则"
+    enable: "启用"
