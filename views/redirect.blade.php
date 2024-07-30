@@ -116,7 +116,7 @@
     </div>
 
     <div id="contens">
-        {{$translator->trans('xypp-qqwx-redirect-page.view.content')}}
+        {{ $translator->trans('xypp-qqwx-redirect-page.view.content') }}
     </div>
 
     <div class="app-download-tip">
@@ -148,6 +148,6 @@
         })
     </script>
 
-    <body>
+</body>
 
 </html>

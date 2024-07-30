@@ -1,6 +1,6 @@
 <?php
 
-namespace Xypp\QQWxRedirect\MiddleWare;
+namespace Xypp\QQWxRedirect\Middleware;
 
 use Flarum\Http\UrlGenerator;
 use Flarum\Locale\Translator;
@@ -16,7 +16,7 @@ class QQWxDetect implements MiddlewareInterface
     protected \Illuminate\Contracts\View\Factory $view;
     protected Cloud $assetsFilesystem;
 
-    function __construct(SettingsRepositoryInterface $settings, \Illuminate\Contracts\View\Factory $view, Factory $filesystemFactory)
+    public function __construct(SettingsRepositoryInterface $settings, \Illuminate\Contracts\View\Factory $view, Factory $filesystemFactory)
     {
         $this->settings = $settings;
         $this->view = $view;
@@ -27,8 +27,9 @@ class QQWxDetect implements MiddlewareInterface
         $baseUrl = $this->assetsFilesystem->url("extensions/xypp-qqwx-redirect-page");
         return $this->view->make('xypp-wxqq-redirect.page::redirect', ["siteUrl" => $siteUrl, "base" => $baseUrl, "assets" => $this->assetsFilesystem])->render();
     }
-    function process(\Psr\Http\Message\ServerRequestInterface $request, \Psr\Http\Server\RequestHandlerInterface $handler): \Psr\Http\Message\ResponseInterface
+    public function process(\Psr\Http\Message\ServerRequestInterface $request, \Psr\Http\Server\RequestHandlerInterface $handler): \Psr\Http\Message\ResponseInterface
     {
+        
         if (str_starts_with($request->getUri()->getPath(), "/assets")) {
             return $handler->handle($request);
         }

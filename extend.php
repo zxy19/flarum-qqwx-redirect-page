@@ -12,7 +12,7 @@
 namespace Xypp\QQWxRedirect;
 
 use Flarum\Extend;
-use Xypp\QQWxRedirect\MiddleWare\QQWxDetect;
+use Xypp\QQWxRedirect\Middleware\QQWxDetect;
 
 return [
     (new Extend\Frontend('admin'))
